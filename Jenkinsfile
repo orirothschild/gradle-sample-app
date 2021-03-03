@@ -12,20 +12,20 @@ options {
   timestamps()
 }
   stages {
-    stage ('Build') {
+    // stage ('Build') {
+    //   steps {
+    //     builder('build','trainSchedule.zip')
+    //   }
+    // }
+    stage ('dockerbuild') {
       steps {
-        builder('build','trainSchedule.zip')
-      }
+        dockerBuild dockerfile:'./files/DockerFile'
+        dockerbuild imageName: 'any_name'
     }
     stage ('check logs') {
       steps {
         filterLogs('Warning',1)
       }
-    }
-    stage ('dockerbuild') {
-      steps {
-        dockerBuild dockerfile:'./files/DockerFile'
-        dockerbuild imageName: 'any_name'
     }
       }
     }
