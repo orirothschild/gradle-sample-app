@@ -15,7 +15,7 @@ options {timestamps()}
       // }
     stage ('dockerbuild') {
       steps {
-        dockerBuild dockerfile:'./Dockerfile'
+        dockerBuild dockerfile:'./dockerfile'
         dockerbuild imageName: 'any_name'
       }
     }
