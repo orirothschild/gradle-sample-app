@@ -1,5 +1,4 @@
 #!/usr/bin/env groovy
-
 //@Library('my-shared-library@master') _ //explicit call to sl
 pipeline {
   agent {
