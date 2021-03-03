@@ -7,7 +7,7 @@ pipeline {
   }
   libraries {
   lib ('my-shared-library@master')
-  lib('jenkins-shared-libraries@master')
+  lib('jenkins_global_lib@master')
 }
 options {
   timestamps()
