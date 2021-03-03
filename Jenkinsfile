@@ -10,7 +10,6 @@ pipeline {
   lib('jenkins-shared-libraries@master')
 }
 options {
-  ansiColor('xterm')
   timestamps()
 }
   stages {
