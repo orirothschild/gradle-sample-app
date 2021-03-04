@@ -24,7 +24,7 @@ pipeline {
 
     stage ("BuildArtifactory") {
       steps {
-        artifactorybuilder('build','*')
+        artifactorybuilder('build','*.jar','')
       }
     }  
 
