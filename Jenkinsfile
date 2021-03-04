@@ -16,7 +16,7 @@ options {timestamps()}
     stage ('dockerbuild') {
       steps {
         dockerBuild dockerfile:'./Dockerfile'
-        dockerbuild imageName: 'any_name'
+        dockerbuild imageName: null
       }
     }
     stage ('check logs') {
