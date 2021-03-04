@@ -29,6 +29,5 @@ options {timestamps()}
         dockerPush()
       }
     }
-}
   }
 }
