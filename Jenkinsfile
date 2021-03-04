@@ -16,9 +16,6 @@ options {timestamps()}
     stage ('dockerbuild') {
       steps {
         dockerBuild()
-
-        // dockerBuild dockerfile:'./Dockerfile'
-        // dockerbuild imageName: null
       }
     }
     stage ('check logs') {
@@ -26,5 +23,12 @@ options {timestamps()}
         filterLogs('Warning',1)
       }
     }
+
+    stage ('docker push') {
+      steps {
+        dockerPush()
+      }
+    }
+}
   }
 }
